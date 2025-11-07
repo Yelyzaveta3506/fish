@@ -1,0 +1,158 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(67, 189, 238);
+}
+
+header {
+    background-color: rgb(64, 118, 143);
+    text-align: center;
+    padding: 15px;
+}
+
+.fish {
+    border: 2px solid green;
+}
+
+nav {
+    display: block;
+    margin: 30px;
+}
+
+nav a {
+    background-color: rgb(0, 195, 255);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+
+    color: rgb(0, 0, 0);
+}
+
+img {border: 4px solid rgb(248, 161, 161);
+     border-radius: 20px;
+     margin: 0 auto;
+     display: block;
+ }
+
+main a {
+    background-color: rgb(0, 195, 255);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    color: rgb(0, 0, 0);
+    margin: 10px auto;
+    display: block;
+    width: fit-content;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+table {
+    margin: 10px auto;
+}
+
+h2,
+h1 {
+    text-align: center;
+
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article p {
+    width: 40%;
+    font-size: larger;
+}
+
+footer {
+background-color: rgb(0, 0, 0); color: antiquewhite;
+padding: 25px;
+}
+.gallery img:hover {
+    opacity:1;
+    border:6px solid rgb(243 183 183);
+    width:500px; height:330px;
+    padding:5px;
+    transition:1s ease-out;
+    }
+
+    a:hover {
+   box-shadow:3px 5px 10px 0 gold ;
+   
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(221, 115, 138),rgb(214, 202, 91));
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Повністю скидаємо стилі для бульбашки */
+.button {
+    background: none !important;      /* Прибираємо будь-який фон (колір чи градієнт) */
+    padding: 0 !important;            /* Прибираємо всі внутрішні відступи */
+    border: none !important;          /* Прибираємо будь-які рамки */
+    border-radius: 0 !important;      /* Прибираємо заокруглення кутів */
+}
+.bubble-image {
+    transition: transform 900ms cubic-bezier(.22, .9, .32, 1);
+    transform: translateY(0) scale(1);
+    will-change: transform;
+    /* Додаємо нову властивість для постійної анімації */
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Прибираємо ефект тіні при наведенні КОНКРЕТНО для бульбашки */
+.button:hover {
+    box-shadow: none !important;      /* Скасовуємо тінь при наведенні */
+}
+
+/* Також переконаймося, що у самої картинки всередині немає рамки */
+.button img {
+    border: none !important;
+}
+
+/* І додамо плавний ефект збільшення для самої картинки-бульбашки */
+.bubble-image:hover {
+transform: translateY(-20px) scale(1.1); /* Підняти на 20px і збільшити на 10% */
+    transition: transform 0.4s ease-out;      /* Зробити анімацію плавною */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Піднімається вгору */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.button {
+  /* Це вириває кнопку зі звичайного потоку сторінки 
+     і фіксує її відносно вікна браузера */
+  position: fixed; 
+  
+  /* Тепер ви можете задати їй "довільне" місце.
+     Наприклад, 30px від правого краю: */
+  right: 30px;
+  
+  /* І 30px від нижнього краю: */
+  bottom: 30px;
+  
+  /* Це гарантує, що кнопка буде поверх інших елементів */
+  z-index: 1000; 
+}
+
+/* (Необов'язково) Додає плавний ефект при наведенні */
+.button:hover {
+  opacity: 0.8; 
+}
